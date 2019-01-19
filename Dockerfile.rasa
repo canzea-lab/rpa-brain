@@ -1,0 +1,17 @@
+FROM rasa/rasa_core:latest
+
+
+# Spacy to match version in rasa/rasa_nlu:0.13.8-spacy
+#RUN pip install msgpack==0.5.6
+#RUN pip install spacy==2.0.11
+#RUN pip install sklearn_crfsuite
+
+RUN pip install -r requirements.txt
+
+RUN pip install spacy
+RUN pip install sklearn_crfsuite
+
+RUN python -m spacy download en
+
+#RUN pip install scikit-learn==0.19.1
+
