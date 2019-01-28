@@ -1,8 +1,7 @@
 mkdir -p _out/app/dialogue
 export PROJECT_PATH=`pwd`/projects/pizza_store
 
-docker run -ti \
-   -p 5005:5005 \
+docker run --rm -ti \
    --mount type=bind,source=$PROJECT_PATH,target=/app/project \
    --mount type=bind,source=`pwd`/_out/app/model,target=/app/model \
    --mount type=bind,source=`pwd`/_out/app/dialogue,target=/app/dialogue \

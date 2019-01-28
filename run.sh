@@ -1,6 +1,6 @@
 # -u NLU model
 # -d Core model
-docker run -ti \
+docker run $MODE --name rpa-brain \
    --mount type=bind,source=`pwd`,target=/tmp \
    --mount type=bind,source=`pwd`/_out/app/dialogue,target=/app/dialogue \
    --mount type=bind,source=`pwd`/_out/app/model,target=/app/model \
